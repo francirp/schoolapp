@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  points_to_redeem: 1
+  adult_id: 1
+  kid_id: 1
+
+two:
+  name: MyString
+  points_to_redeem: 1
+  adult_id: 1
+  kid_id: 1

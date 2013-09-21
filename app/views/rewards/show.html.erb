@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reward.name %>
+</p>
+
+<p>
+  <strong>Points to redeem:</strong>
+  <%= @reward.points_to_redeem %>
+</p>
+
+<p>
+  <strong>Adult:</strong>
+  <%= @reward.adult_id %>
+</p>
+
+<p>
+  <strong>Kid:</strong>
+  <%= @reward.kid_id %>
+</p>
+
+<%= link_to 'Edit', edit_reward_path(@reward) %> |
+<%= link_to 'Back', rewards_path %>

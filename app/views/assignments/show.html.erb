@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @assignment.time %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @assignment.subject %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @assignment.points %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @assignment.completed %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @assignment.due_date %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @assignment.frequency %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @assignment.teacher_id %>
+</p>
+
+<p>
+  <strong>Kid:</strong>
+  <%= @assignment.kid_id %>
+</p>
+
+<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
+<%= link_to 'Back', assignments_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  time: 1
+  subject: MyString
+  points: 1
+  completed: false
+  due_date: 2013-09-21 17:30:04
+  frequency: MyString
+  teacher_id: 1
+  kid_id: 1
+
+two:
+  time: 1
+  subject: MyString
+  points: 1
+  completed: false
+  due_date: 2013-09-21 17:30:04
+  frequency: MyString
+  teacher_id: 1
+  kid_id: 1
