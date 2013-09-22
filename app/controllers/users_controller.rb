@@ -27,16 +27,19 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    respond_to do |format|
+    if @user.user_type == User.adult
       if @user.save
-        if @user.user_type == User.adult
-          format.html { redirect_to new_kid_path, notice: 'User was successfully created.' }
-        else
-          format.html { redirect_to user_path(@user), notice: 'User was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @user }
+        session[:user_id] = @user.id
+        redirect_to new_kid_path, notice: 'User was successfully created.'
       else
-        format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render 'new'
+      end
+    else
+      if @user.save
+        @kid = Kid.find_by(:user_id => @user.id)
+        redirect_to new_reward_path(current_user.adult), notice: 'User was successfully created.'
+      else
+        render 'kids/new'
       end
     end
   end

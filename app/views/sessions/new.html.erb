@@ -1,0 +1,15 @@
+<h1>Sign in</h1>
+<%= form_tag session_url do %>
+
+  <div class="field">
+    <%= label_tag :login, "Username or Email" %><br>
+    <%= text_field_tag :login %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %><br>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>

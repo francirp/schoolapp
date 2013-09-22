@@ -1,6 +1,15 @@
 Schoolapp::Application.routes.draw do
 
   root 'pages#home'
+
+  post '/users/kids' => 'users#create_kid'
+  post '/users/adults' => 'users#create_adult'
+
+  get '/sessions/new' => 'sessions#new', as: 'new_session'
+  post '/sessions' => 'sessions#create', as: 'sessions'
+  delete '/sessions' => 'sessions#destroy', as: 'session'
+
+
   resources :rewards
 
   resources :assignments
